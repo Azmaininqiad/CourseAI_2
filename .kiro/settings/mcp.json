@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "uvx",
+      "args": ["mcp-server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "postgresql://postgres.fmjhprfruwskmyualmip:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZtamhwcmZydXdza215dWFsbWlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MzY1ODYxNCwiZXhwIjoyMDY5MjM0NjE0fQ.wYiZz-fP3u2xoEmJV5DJNjFFUX0FTftSPbUnxNhcogM@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+      },
+      "disabled": false,
+      "autoApprove": ["query", "list_tables", "describe_table", "execute"]
+    },
+    "web-search": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": ["fetch"]
+    },
+    "course-ai-tools": {
+      "command": "uvx",
+      "args": ["mcp-server-filesystem", "--base-directory", "."],
+      "env": {},
+      "disabled": false,
+      "autoApprove": ["read_file", "write_file", "list_directory", "create_directory"]
+    }
+  }
+}
