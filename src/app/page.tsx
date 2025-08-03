@@ -1,9 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Sparkles, Brain, Layers, Rocket, ChevronRight, BookOpen, Code, Zap, Users, CheckCircle } from 'lucide-react'
+import { Sparkles, Layers, ChevronRight, CheckCircle } from 'lucide-react'
 
 export default function WelcomePage() {
   return (
@@ -26,8 +24,8 @@ export default function WelcomePage() {
             </div>
             <div className="flex items-center space-x-4">
               <Link href="/login" className="text-sm text-gray-300 hover:text-white">Sign in</Link>
-              <Link 
-                href="/dashboard" 
+              <Link
+                href="/dashboard"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-2 px-4 rounded-md text-sm font-medium hover:from-orange-600 hover:to-pink-600 transition-all duration-200"
               >
                 Get Started
@@ -44,60 +42,50 @@ export default function WelcomePage() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0c0c1d] via-[#1a103a] to-[#0c0c1d] opacity-90"></div>
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
           </div>
-          
+
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between">
-              <motion.div 
-                className="lg:w-1/2 mb-12 lg:mb-0"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="lg:w-1/2 mb-12 lg:mb-0">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent">
                     AI-powered education
                   </span>
                   <br />
                   <span className="text-white">
-                    for the next generation
+                    and expert mentorship
                   </span>
                 </h1>
-                
+
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                  Generate comprehensive, media-rich courses on any topic in minutes. 
-                  Transform how knowledge is created, shared, and consumed with the power of artificial intelligence.
+                  Create comprehensive courses with AI-generated content, images, and videos.
+                  Connect with expert mentors for personalized guidance and skill testing. Your complete learning ecosystem.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <Link 
-                    href="/dashboard" 
+                  <Link
+                    href="/dashboard"
                     className="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 px-8 rounded-lg font-medium shadow-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center group"
                   >
-                    Get started for free
+                    Create AI Courses
                     <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                  
-                  <Link 
-                    href="/demo" 
+
+                  <Link
+                    href="https://temp-psi-jet.vercel.app/dashboard"
                     className="bg-[#1a103a] text-gray-200 border border-purple-700/50 py-3 px-8 rounded-lg font-medium hover:bg-[#251352] transition-all duration-200 flex items-center justify-center"
                   >
-                    Watch demo
+                    Find Mentors
                   </Link>
                 </div>
-              </motion.div>
-              
-              <motion.div 
-                className="lg:w-1/2 relative"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              </div>
+
+              <div className="lg:w-1/2 relative">
                 <div className="relative">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-purple-500 rounded-lg opacity-75 blur-lg"></div>
                   <div className="relative bg-[#0c0c1d] rounded-lg p-1">
-                    <img 
-                      src="/course-preview.png" 
-                      alt="CourseAI Preview" 
+                    <img
+                      src="/course-preview.png"
+                      alt="CourseAI Preview"
                       className="rounded-lg shadow-2xl"
                       onError={(e) => {
                         e.currentTarget.src = 'https://placehold.co/600x400/1a103a/ffffff?text=CourseAI+Preview';
@@ -105,7 +93,7 @@ export default function WelcomePage() {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -115,19 +103,19 @@ export default function WelcomePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent">
-                There's nothing you can't teach with CourseAI
+                Complete learning ecosystem in one platform
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our customers' words, not ours. From K-12 to higher education to corporate training.
+                Generate AI-powered courses with rich media content, then connect with expert mentors for personalized guidance. From content creation to skill mastery.
               </p>
               <div className="mt-4 text-gray-400">
                 Skeptical? <Link href="/demo" className="text-orange-400 hover:underline">Try it out</Link>, and see for yourself.
               </div>
             </div>
-            
+
             <div className="mt-12 flex justify-center">
-              <Link 
-                href="/dashboard" 
+              <Link
+                href="/dashboard"
                 className="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 px-8 rounded-lg font-medium shadow-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200"
               >
                 Start building
@@ -135,110 +123,111 @@ export default function WelcomePage() {
             </div>
           </div>
         </section>
-        
+
         {/* Third Section - AI Working in Education */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0c1d]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">
-                <span className="text-gray-200">The fast way to actually</span>
+                <span className="text-gray-200">Two powerful systems</span>
                 <br />
                 <span className="bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent">
-                  get AI working in education
+                  working together
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
               <div className="bg-[#1a103a]/50 rounded-xl p-8 border border-purple-900/50">
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  Build multi-subject courses with custom content
+                  CourseAI: Intelligent Content Creation
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Create comprehensive educational systems on any topic. 
-                  Integrate any learning material into your courses as fast as you can imagine.
+                  Generate comprehensive courses with AI-powered content creation.
+                  Automatically embed relevant images, YouTube videos, and structured learning modules in minutes.
                 </p>
-                <Link 
-                  href="/features" 
+                <Link
+                  href="/dashboard"
                   className="inline-flex items-center text-blue-400 hover:text-blue-300"
                 >
-                  Explore AI <ChevronRight className="ml-1 h-4 w-4" />
+                  Create Course <ChevronRight className="ml-1 h-4 w-4" />
                 </Link>
-                
+
                 <div className="mt-8 space-y-2 text-sm text-gray-400">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Automatic content generation</span>
+                    <span>15 structured modules per course</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Custom unit testing included</span>
+                    <span>Auto-embedded images and videos</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Automatic media enhancement</span>
+                    <span>3+ hours of learning content</span>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-[#1a103a]/50 rounded-xl p-8 border border-purple-900/50">
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  Chat with your own educational data
+                  Mentor-Test: Expert Guidance & Assessment
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Use existing textbooks, lecture notes, or custom materials to get
-                  accurate answers, create assignments, and complete educational workflows.
+                  Connect with verified mentors for personalized sessions, skill assessments, and career guidance.
+                  Book sessions, track progress, and get expert feedback on your learning journey.
                 </p>
-                
+
                 <div className="mt-8 bg-[#0c0c1d] rounded-lg p-4 border border-gray-800">
                   <div className="text-sm text-gray-300 mb-2">
-                    <span className="text-orange-400">Question:</span> Who discovered the theory of relativity?
+                    <span className="text-orange-400">Session Type:</span> 1-on-1 Mentorship Session
                   </div>
                   <div className="text-sm text-gray-300 mb-4">
-                    <span className="text-purple-400">Answer:</span> Albert Einstein published the theory of special relativity in 1905, followed by the theory of general relativity in 1915, revolutionizing our understanding of space, time, and gravity.
+                    <span className="text-purple-400">Available:</span> Video calls, chat sessions, skill assessments, and progress tracking with calendar integration.
                   </div>
-                  
+
                   <div className="text-xs text-gray-500">
-                    Generated from your custom educational materials
+                    Verified mentors with ratings and reviews
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Fourth Section - Self-hosting */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0a1a]">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block bg-[#1a103a] rounded-lg px-3 py-1 text-sm text-gray-400 mb-4">
-                  SELF-HOSTED
+                  INTEGRATED PLATFORM
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-6">
-                  Self-host everything —<br />
-                  including AI models
+                  From course creation —<br />
+                  to expert mentorship
                 </h2>
                 <p className="text-gray-300 mb-8">
-                  Protect your educational data by deploying on-prem. Perfect for schools and institutions with privacy requirements.
+                  Create AI-powered courses with rich media content, then connect with expert mentors for personalized guidance.
+                  Complete your learning journey from content to mastery.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    <span className="text-gray-200">Deploy with Docker</span>
+                    <span className="text-gray-200">AI-generated courses with media</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    <span className="text-gray-200">Access the entire source code on GitHub</span>
+                    <span className="text-gray-200">Expert mentor matching system</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    <span className="text-gray-200">Hosted version also available</span>
+                    <span className="text-gray-200">Session booking and progress tracking</span>
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-lg blur-lg"></div>
                 <div className="relative bg-[#1a103a] rounded-lg p-6 border border-purple-900/50">
@@ -246,17 +235,17 @@ export default function WelcomePage() {
                     <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mr-3">
                       <Layers className="h-6 w-6 text-white" />
                     </div>
-                    <span className="text-lg font-medium text-white">Local AI</span>
+                    <span className="text-lg font-medium text-white">Dual Platform</span>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-4">
-                    Run AI models locally for complete data privacy and control.
-                    Perfect for educational institutions with strict privacy requirements.
+                    CourseAI creates comprehensive learning materials with embedded media, while Mentor-Test connects you with expert guidance.
+                    Complete learning ecosystem in one platform.
                   </p>
-                  
+
                   <div className="flex justify-end">
-                    <Link 
-                      href="/self-hosting" 
+                    <Link
+                      href="/self-hosting"
                       className="text-sm text-blue-400 hover:text-blue-300"
                     >
                       Learn more
@@ -267,39 +256,47 @@ export default function WelcomePage() {
             </div>
           </div>
         </section>
-        
+
         {/* Fifth Section - Automation for Education */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0c1d] relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-radial from-purple-900/20 to-transparent opacity-70"></div>
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
           </div>
-          
+
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <div className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 rounded-full px-4 py-1 text-sm text-white mb-4">
-                CourseAI embed
+                Complete Learning Solution
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Automation for<br />your educational content
+                Learn, create,<br />and get mentored
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Wow your students with access to 500+ app integrations to automate their learning experience.
-                Your branding. Our white-labeled tech.
+                Start with AI-generated courses featuring rich media content, then connect with expert mentors for personalized guidance.
+                Your complete learning journey from content creation to skill mastery.
               </p>
             </div>
-            
+
             <div className="mt-12 flex justify-center">
-              <Link 
-                href="/embed" 
-                className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg font-medium transition-colors duration-200"
-              >
-                Explore CourseAI embed
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/dashboard"
+                  className="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 px-8 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Try CourseAI
+                </Link>
+                <Link
+                  href="https://temp-psi-jet.vercel.app/dashboard"
+                  className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Find Mentors
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-        
+
         {/* Footer */}
         <footer className="border-t border-gray-800 bg-[#0a0a1a] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

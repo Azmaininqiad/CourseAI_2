@@ -1,5 +1,4 @@
-node_modules
-node_modules/
-/node_modules/*
-backend/venv
-backend/env
+backend/venv/
+backend/__pycache__/
+/node_modules/
+dist/
